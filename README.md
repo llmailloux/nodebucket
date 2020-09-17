@@ -1,36 +1,21 @@
-WEB 450 Mastering the MEAN Stack Bootcamp
-Bellevue University
+Nodebucket
 
-Address: 1000 Galvin Rd S, Bellevue, Nebraska 68005 - Directions
+This project was generated with Angular CLI version 10.1.0.
+Development server
 
-Web Development Degree
-Course Description
+Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Code scaffolding
 
-This course is an immersive web development bootcamp. It is a full stack experience using the skills previously developed in languages, API, and framework. The course pulls it all together in a more difficult and high demanding environment. Topics include UI considerations, web services, server-side scripting, and database development and use. Students will complete individual JavaScript projects using the entire web stack. Groups will complete a real-world, highly complex, JavaScript project using the entire web stack and using separate development environments to promote software through development, QA, and production. GitHub is used to store the projects. The course is synchronous with all students participating five nights a week for 9 consecutive weeks.
+Run ng generate component component-name to generate a new component. You can also use ng generate directive|pipe|service|class|guard|interface|enum|module.
+Build
 
-Prerequisite: WEB 200, WEB 231, WEB 330, WEB 340, WEB 335, WEB 420, and WEB 425
-Course Overview
+Run ng build to build the project. The build artifacts will be stored in the dist/ directory. Use the --prod flag for a production build.
+Running unit tests
 
-Carefully read the assigned chapters, videos, and narrative I've included under each module.
+Run ng test to execute the unit tests via Karma.
+Running end-to-end tests
 
-To get the most out of this course, I encourage everyone to actively participate in Slack by asking questions, answering questions, and helping others out with their application/programming tasks. Collaboration is not only allowed, it is highly encouraged.
-Project Overview/Coverage
+Run ng e2e to execute the end-to-end tests via Protractor.
+Further help
 
-    Planning
-    Designing
-    Testing
-    Deployment (Heroku)
-
-Repository Overview
-
-The courses repository consist of two directories: starter-code and examples. The starter-code directory contains the base starter projects for nodebucket and Bob's Computer Repair Shop. The examples directory contains example projects that will aid you in completing some of the weekly Sprint tasks.
-
-git clone https://github.com/buwebdev/web-450.git
-cd web-450
-
-Textbooks GitHub Repository
-
-GitHub Link
-
-git clone https://github.com/cliveharber/gettingMean-2.git
-cd gettingMean-2
+To get more help on the Angular CLI use ng help or go check out the Angular CLI README.
