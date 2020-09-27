@@ -7,6 +7,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
+const Employee = require('./models/employee'); // get the employee 
 
 /**
  * App configurations
@@ -24,7 +25,7 @@ app.use('/', express.static(path.join(__dirname, '../dist/nodebucket')));
 const port = 3000; // server port
 
 // TODO: This line will need to be replaced with your actual database connection string
-const conn = 'mongodb+srv://superadmin:s3cret@cluster0-lujih.mongodb.net/nodebucket?retryWrites=true&w=majority';
+const conn = 'mongodb+srv://nodebucket_user:wVV3bt1Lc95i8HRL@buwebdev-cluster-1.2bwgd.mongodb.net/nodebucket?retryWrites=true&w=majority';
 
 /**
  * Database connection
@@ -32,16 +33,62 @@ const conn = 'mongodb+srv://superadmin:s3cret@cluster0-lujih.mongodb.net/nodebuc
 mongoose.connect(conn, {
   promiseLibrary: require('bluebird'),
   useUnifiedTopology: true,
-  useNewUrlParser: true
-}).then(() => {
-  console.debug(`Connection to the database instance was successful`);
-}).catch(err => {
-  console.log(`MongoDB Error: ${err.message}`)
+  useNewUrlParser: true,
+  useCreateIndex: true,
+})
+.then(() => {
+  console.debug(`Connection to the database instance was successful`)
+})
+.catch(err => {
+  console.log(`MongoDB Error: ${err.message}`);
 }); // end mongoose connection
 
 /**
  * API(s) go here...
  */
+/**
+ * find employee by Id
+ */
+app.get('/api/employees/:empId', async(req, res) =>{
+
+  try {
+
+    /**
+     * Use the mongoose employee model to query MongoDB Atlas by employeeId
+     */
+
+    Employee.findOne({'empId': req.params.empId }, function(err, employee){
+
+      /**
+       * If there is a database level error, handle by returing a server 500 error
+       */
+
+      if (err) {
+        console.log(err);
+        res.status(500).send({
+          'message': 'Internal Server Error!'
+        })
+
+      } else {
+        /**
+         * If there are no database level errors, return the employee object
+         */
+
+        console.log(employee);
+        res.json(employee);
+      }
+    })
+
+  } catch (e) {
+    /**
+     * Catch any potential errors that we didn't prepare for
+     */
+    console.log(e); 
+    res.status(500).send({
+      'message': 'Internal Sever Error!',
+    })
+  }
+})
 
 /**
  * Create and start server
