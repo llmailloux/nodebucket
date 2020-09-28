@@ -1,3 +1,13 @@
+/*============================================
+; Title:          employees.js
+; Author:         Professor R. Krasso
+; Modified by:    Laurie Mailloux
+; Date:           27 September 2020
+; Description:    Creates an employee
+;===========================================*/
+
+
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 

@@ -1,3 +1,11 @@
+/*============================================
+; Title:          auth.guards.ts
+; Author:         Professor R. Krasso
+; Modified by:    Laurie Mailloux
+; Date:           27 September 2020
+; Description:    auth guards
+;===========================================*/
+
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';

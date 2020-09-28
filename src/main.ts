@@ -1,3 +1,11 @@
+/*============================================
+; Title:          main.ts.ts
+; Author:         Professor R. Krasso
+; Modified by:    Laurie Mailloux
+; Date:           27 September 2020
+; Description:    Main
+;===========================================*/
+
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 

@@ -1,3 +1,11 @@
+/*============================================
+; Title:          app-routing.module.ts
+; Author:         Professor R. Krasso
+; Modified by:    Laurie Mailloux
+; Date:           27 September 2020
+; Description:    app routes
+;===========================================*/
+
 import { HomeComponent } from './pages/home/home.component';
 import { BaseLayoutComponent } from './shared/base-layout/base-layout.component';
 import { NgModule } from '@angular/core';

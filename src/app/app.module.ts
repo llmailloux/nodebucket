@@ -1,3 +1,11 @@
+/*============================================
+; Title:          app.module.ts
+; Author:         Professor R. Krasso
+; Modified by:    Laurie Mailloux
+; Date:           27 September 2020
+; Description:    App module
+;===========================================*/
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,7 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SigninComponent } from './pages/signin/signin.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule }from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
