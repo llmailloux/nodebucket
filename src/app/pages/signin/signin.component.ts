@@ -24,7 +24,9 @@ export class SigninComponent implements OnInit {
   error: string;
 
 
-  constructor(private router: Router, private cookieService: CookieService, private fb: FormBuilder, private http: HttpClient) { }
+  constructor(private router: Router, private cookieService: CookieService, private fb: FormBuilder, private http: HttpClient) { 
+    
+  }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -38,8 +40,11 @@ login() {
   this.http.get('/api/employees/' + empId).subscribe(res => {
     if (res) {
       this.cookieService.set('session_user', empId, 1); //set the employee id to the cookie, session_user name
-      this.router.navigate(['/'])
+      this.router.navigate(['/']);
     } else {
+      /**
+       * Otherwise, we will display an invalid employeeId error message
+       */
       this.error = 'The employee ID you entered is invalid, please try again';
 
     }

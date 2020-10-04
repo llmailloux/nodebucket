@@ -16,6 +16,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
 const Employee = require('./models/employee'); // get the employee 
+const EmployeeApi = require('./routes/employee-api'); //import the employee API; sets u routes for the employee 
 
 /**
  * App configurations
@@ -54,53 +55,12 @@ mongoose.connect(conn, {
 /**
  * API(s) go here...
  */
-/**
- * find employee by Id
- */
-app.get('/api/employees/:empId', async(req, res) =>{
-
-  try {
-
-    /**
-     * Use the mongoose employee model to query MongoDB Atlas by employeeId
-     */
-
-    Employee.findOne({'empId': req.params.empId }, function(err, employee){
-
-      /**
-       * If there is a database level error, handle by returing a server 500 error
-       */
-
-      if (err) {
-        console.log(err);
-        res.status(500).send({
-          'message': 'Internal Server Error!'
-        })
-
-      } else {
-        /**
-         * If there are no database level errors, return the employee object
-         */
-
-        console.log(employee);
-        res.json(employee);
-      }
-    })
-
-  } catch (e) {
-    /**
-     * Catch any potential errors that we didn't prepare for
-     */
-    console.log(e); 
-    res.status(500).send({
-      'message': 'Internal Sever Error!',
-    })
-  }
-})
+app.use('/api/employees', EmployeeApi); 
 
 /**
- * Create and start server
- */
-http.createServer(app).listen(port, function() {
-  console.log(`Application started and listening on port: ${port}`)
-}); // end http create server function
+   * Create and start server
+   */
+  http.createServer(app).listen(port, function() {
+    console.log(`Application started and listening on port: ${port}`)
+  }); // end http create server function
+  
