@@ -1,3 +1,11 @@
+/*============================================
+; Title:          polyfills.ts
+; Author:         Laurie Mailloux
+; Date:           05 October 2020
+; Description:    Pollfills
+;===========================================*/
+
+
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
  * You can add your own extra polyfills to this file.

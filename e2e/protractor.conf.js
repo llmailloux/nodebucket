@@ -1,3 +1,11 @@
+/*============================================
+; Title:          protractor.config.ts
+; Author:         Laurie Mailloux
+; Date:           05 October 2020
+; Description:    Protractor Config
+;===========================================*/
+
+
 // @ts-check
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts

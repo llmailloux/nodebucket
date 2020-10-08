@@ -1,7 +1,6 @@
 /*============================================
 ; Title:          app.module.ts
-; Author:         Professor R. Krasso
-; Modified by:    Laurie Mailloux
+; Author:         Laurie Mailloux
 ; Date:           27 September 2020
 ; Description:    App module
 ;===========================================*/
@@ -25,6 +24,10 @@ import { SigninComponent } from './pages/signin/signin.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 @NgModule({
@@ -33,7 +36,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     HomeComponent,
     BaseLayoutComponent,
     AuthLayoutComponent,
-    SigninComponent
+    SigninComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ReactiveFormsModule,
     MatCardModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatDividerModule,
+    DragDropModule,
+    MatDialogModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

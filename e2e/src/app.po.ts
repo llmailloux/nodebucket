@@ -1,3 +1,11 @@
+/*============================================
+; Title:          app.po.ts
+; Author:         Laurie Mailloux
+; Date:           05 October 2020
+; Description:    App PO
+;===========================================*/
+
+
 import { browser, by, element } from 'protractor';
 
 export class AppPage {

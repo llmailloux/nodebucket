@@ -2,6 +2,7 @@
     margin-top: 15%;
     width: 50%;
     margin-left: 25%;
+    background-color: #DCDCDC;
     }
     .signin-title{
     text-align: center;
@@ -18,3 +19,5 @@
     .signin-title{
         color: crimson;
       }
+ 
+    

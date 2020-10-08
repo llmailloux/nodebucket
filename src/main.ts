@@ -1,7 +1,6 @@
 /*============================================
 ; Title:          main.ts.ts
-; Author:         Professor R. Krasso
-; Modified by:    Laurie Mailloux
+; Author:         Laurie Mailloux
 ; Date:           27 September 2020
 ; Description:    Main
 ;===========================================*/

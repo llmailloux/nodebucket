@@ -1,3 +1,11 @@
+/*============================================
+; Title:          error.response.js
+; Author:         Laurie Mailloux
+; Date:           05 October 2020
+; Description:    Error Response
+;===========================================*/
+
+
 class ErrorResponse {
     constructor(httpCode, message, data){
         this.httpCode = httpCode;

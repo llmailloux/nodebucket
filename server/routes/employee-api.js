@@ -1,3 +1,11 @@
+/*============================================
+; Title:          employee-api.js
+; Author:         Laurie Mailloux
+; Date:           05 October 2020
+; Description:    Employee API
+;===========================================*/
+
+
 const express = require('express');
 const Employee = require('../models/employee');
 const BaseResponse = require('../services/base-response');

@@ -1,3 +1,11 @@
+/*============================================
+; Title:          base-response.js
+; Author:         Laurie Mailloux
+; Date:           05 October 2020
+; Description:    Base Response
+;===========================================*/
+
+
 class BaseResponse {
     constructor(httpCode, message, data){
         this.httpCode = httpCode;

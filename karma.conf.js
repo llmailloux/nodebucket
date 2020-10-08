@@ -1,3 +1,11 @@
+/*============================================
+; Title:          karma.config.js
+; Author:         Laurie Mailloux
+; Date:           05 October 2020
+; Description:    Karma Config
+;===========================================*/
+
+
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 

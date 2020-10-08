@@ -1,7 +1,6 @@
 /*============================================
 ; Title:          signin.component.ts
-; Author:         Professor R. Krasso
-; Modified by:    Laurie Mailloux
+; Author:         Laurie Mailloux
 ; Date:           27 September 2020
 ; Description:    signin page
 ;===========================================*/
@@ -36,6 +35,7 @@ export class SigninComponent implements OnInit {
 
 login() {
   const empId = this.form.controls['empId'].value;
+  console.log
 
   this.http.get('/api/employees/' + empId).subscribe(res => {
     if (res) {
