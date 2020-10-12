@@ -61,11 +61,14 @@
     .task-card {
       cursor: move;
       padding: 20px 10 px;
-      border-bottom: solid 1 px #ccc;
+      border-bottom: solid 1px #ccc;
       min-height: 68px;
       height: 68px;
       font-size: 14px;
       box-sizing: border-box;
       justify-content: space-between;
       align-items: center;
+    }
+    .task-options-menu {
+      margin-top: -15px;
     }

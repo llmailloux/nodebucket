@@ -28,6 +28,10 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { CreateTaskDialogComponent } from './shared/create-task-dialog/create-task-dialog.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { AboutComponent } from './pages/about/about.component';
+
 
 
 @NgModule({
@@ -37,6 +41,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     BaseLayoutComponent,
     AuthLayoutComponent,
     SigninComponent,
+    CreateTaskDialogComponent,
+    AboutComponent,
     NotFoundComponent
   ],
   imports: [
@@ -56,6 +62,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MatDividerModule,
     DragDropModule,
     MatDialogModule,
+    MatMenuModule
 
 
   ],

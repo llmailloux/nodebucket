@@ -35,7 +35,6 @@ export class SigninComponent implements OnInit {
 
 login() {
   const empId = this.form.controls['empId'].value;
-  console.log
 
   this.http.get('/api/employees/' + empId).subscribe(res => {
     if (res) {

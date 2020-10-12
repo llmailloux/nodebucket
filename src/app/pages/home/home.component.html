@@ -53,6 +53,18 @@
                 <div fxFlex>
                   {{ item.text }}
                 </div>
+                <div fxFlex fxLayoutAlign="end">
+                  <button [matMenuTriggerFor]="todoOptions" class="task-options-menu" mat-icon-button>
+                    <mat-icon>more_horiz</mat-icon>
+                  </button>
+
+                  <mat-menu #todoOptions="matMenu" x-position="before">
+                    <button (click)="deleteTask(item._id)" mat-menu-item>
+                      Remove
+                    </button>
+
+                  </mat-menu>
+                </div>
                 </div>
             </mat-card-content>
           </mat-card>
@@ -92,6 +104,18 @@
         <div fxLayout="row">
           <div fxFlex>
             {{ item.text }}
+          </div>
+          
+          <div fxFlex fxLayoutAlign="end">
+            <button [matMenuTriggerFor]="doneOptions" class="task-options-menu"mat-icon-button>
+              <mat-icon>more_horiz</mat-icon>
+            </button>
+
+            <mat-menu #doneOptions="matMenu" x-position="before">
+              <button (click)="deleteTask(item._id)" mat-menu-item>
+                Remove
+              </button>
+            </mat-menu>
           </div>
         </div>
 

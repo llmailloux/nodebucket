@@ -4,14 +4,17 @@
       <mat-toolbar color="primary">
         <!-- navbar container -->
         <div class="navbar-container">
+          <img class="logo" routerLink="/" src="../../../assets/nodebucket.png" height="55" style="margin-top: 5px;"/>
           <!-- logo -->
-          <button class="logo" routerLink="/" mat-button>nodebucket</button>
-
+         
           <button class="navbar-link" routerLink="/" mat-button>Home</button>
-          <button class="navbar-link" mat-button>About</button>
-          <button
-            class="navbar-link"
+          <button class="navbar-link" routerLink="/about" mat-button>About</button>
+          
+          <button 
+            class="navbar-link" 
+
             mat-button
+            
             (click)="signOut()"
           >
             Sign Out

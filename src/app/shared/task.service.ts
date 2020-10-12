@@ -11,6 +11,7 @@ import { CookieService} from 'ngx-cookie-service';
 import { HttpClient } from '@angular/common/http';
 import{ Observable } from 'rxjs';
 import { Item }from './item.interface';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -30,7 +31,12 @@ findAllTasks(empId: string): Observable<any> {
  /**
   * createTask
   */
+createTask(empId: string, task: string): Observable<any>{
+  return this.http.post('/api/employees/' + empId + '/tasks', {
+    text: task
+  })
 
+}
   /**
    * updateTasks
    */
@@ -41,6 +47,8 @@ updateTask(empId: string, todo: Item[], done: Item[]): Observable<any> {
   })
 }
    /**deleteTasks
-    * 
-    */
+      */
+     deleteTask(empId: string, taskId: string): Observable<any> {
+       return this.http.delete('/api/employees/' + empId + '/tasks/' + taskId)
+     }
 }

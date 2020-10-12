@@ -1,5 +1,9 @@
 <div fxLayout="column">
 
+  <div fxFlex *ngIf="error">
+    {{ error }}
+  </div>
+
   <mat-card fxFlex class="signin-container mat-elevation-z8">
 
     <mat-card-title class="signin-title mat-headline">Employee Sign-in</mat-card-title><br />
@@ -17,11 +21,11 @@
 
               <input matInput [formControl]="form.controls['empId']" placeholder="Employee ID" />
 
-               <mat-error *ngIf="form.controls['empId'].hasError('required') && form.controls['empId'].touched">
+               <mat-error *ngIf="form.controls['empId'].hasError('required') && form.controls['empId']">
                 Employee ID is a required field.
               </mat-error>
 
-              <mat-error *ngIf="form.controls['empId'].hasError('pattern') && form.controls['empId'].touched">
+              <mat-error *ngIf="form.controls['empId'].hasError('pattern') && form.controls['empId']">
                 Employee ID must be a numerical value.
               </mat-error>
 

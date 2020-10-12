@@ -13,7 +13,6 @@ const ErrorResponse = require ('../services/error.response');
 
 const router = express.Router();
 
-module.exports = router;
 
 /**
  * find employee by Id
@@ -34,9 +33,9 @@ router.get('/:empId', async(req, res) => {
   
         if (err) {
           console.log(err);
-
-          const mongoDbErrorResponse = new ErrorResponse('500', 'Internal server error', err);
-          res.status(500).send(mongoDbErrorResponse.toObject());
+          res.status(500).send({
+            'message': 'Internal server error'
+          })
   
         } else {
           /**
@@ -44,10 +43,9 @@ router.get('/:empId', async(req, res) => {
            */
   
           console.log(employee);
-
-          const employeeTasksResponse = new BaseResponse('200', 'Query successful', employee);
-          res.json(employeeTasksResponse.toObject());
+          res.json(employee);
         }
+      
       })
   
     } catch (e) {
@@ -196,7 +194,7 @@ const updatedTaskOnSaveSuccessresponse = new BaseResponse('200', "update success
      /**
       * API: deleteTask
       */
-  router.delete('/:empId/tasks/:Id', async(req, res) => {
+  router.delete('/:empId/tasks/:taskId', async(req, res) => {
 
     try {
 
@@ -257,7 +255,7 @@ const updatedTaskOnSaveSuccessresponse = new BaseResponse('200', "update success
 
                 const deleteTaskNotFoundResponse = new ErrorResponse('200', 'Unable to locate the requested task', null);
 
-                resp.status(200).send(deleteTaskNotFoundResponse.toObject());
+                res.status(200).send(deleteTaskNotFoundResponse.toObject());
               }
             }
         })
